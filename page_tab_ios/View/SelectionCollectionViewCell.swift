@@ -12,13 +12,13 @@ class SelectionCollectionViewCell: UICollectionViewCell {
     
     override var isHighlighted: Bool{
         didSet{
-            tabLabel.textColor = isHighlighted ? UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1) : UIColor(red: 211/255, green: 208/255, blue: 208/255, alpha: 1)
+            tabLabel.textColor = isHighlighted ? UIColor(red: 38/255, green: 155/255, blue: 255/255, alpha: 1) : UIColor(red: 211/255, green: 208/255, blue: 208/255, alpha: 1)
         }
     }
     
     override var isSelected: Bool{
         didSet{
-            tabLabel.textColor = isSelected ? UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1) : UIColor(red: 211/255, green: 208/255, blue: 208/255, alpha: 1)
+            tabLabel.textColor = isSelected ? UIColor(red: 38/255, green: 155/255, blue: 255/255, alpha: 1) : UIColor(red: 211/255, green: 208/255, blue: 208/255, alpha: 1)
         }
     }
     

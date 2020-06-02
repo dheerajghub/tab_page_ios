@@ -10,6 +10,22 @@ import UIKit
 
 class SelectionView:UIView {
     
+    var trackViewLeadingAnchor:NSLayoutConstraint?
+    
+    let seperatorView:UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = UIColor(red: 211/255, green: 208/255, blue: 208/255, alpha: 1)
+        return v
+    }()
+    
+    let trackView:UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = UIColor(red: 38/255, green: 155/255, blue: 255/255, alpha: 1)
+        return v
+    }()
+    
     let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     
     lazy var collectionView:UICollectionView = {
@@ -28,6 +44,8 @@ class SelectionView:UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(collectionView)
+        addSubview(seperatorView)
+        addSubview(trackView)
         setUpConstraints()
     }
     
@@ -36,8 +54,19 @@ class SelectionView:UIView {
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor)
+            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
+            
+            seperatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            seperatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            seperatorView.heightAnchor.constraint(equalToConstant: 0.7),
+            seperatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
+        
+        trackViewLeadingAnchor = trackView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        trackViewLeadingAnchor?.isActive = true
+        trackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/2).isActive = true
+        trackView.heightAnchor.constraint(equalToConstant: 0.7).isActive = true
+        trackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     required init?(coder: NSCoder) {

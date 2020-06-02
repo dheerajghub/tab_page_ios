@@ -14,6 +14,7 @@
 		448301C12486598A00219659 /* PageTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C02486598A00219659 /* PageTabViewController.swift */; };
 		448301C324865A9F00219659 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C224865A9F00219659 /* SelectionView.swift */; };
 		448301C524865C2D00219659 /* SelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C424865C2D00219659 /* SelectionCollectionViewCell.swift */; };
+		448301C724867CAF00219659 /* TabDetailContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C624867CAF00219659 /* TabDetailContentCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		448301C02486598A00219659 /* PageTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTabViewController.swift; sourceTree = "<group>"; };
 		448301C224865A9F00219659 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		448301C424865C2D00219659 /* SelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		448301C624867CAF00219659 /* TabDetailContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailContentCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				448301C224865A9F00219659 /* SelectionView.swift */,
 				448301C424865C2D00219659 /* SelectionCollectionViewCell.swift */,
+				448301C624867CAF00219659 /* TabDetailContentCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				448301AD248658E000219659 /* SceneDelegate.swift in Sources */,
 				448301C524865C2D00219659 /* SelectionCollectionViewCell.swift in Sources */,
 				448301C324865A9F00219659 /* SelectionView.swift in Sources */,
+				448301C724867CAF00219659 /* TabDetailContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

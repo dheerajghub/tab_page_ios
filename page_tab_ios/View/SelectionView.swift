@@ -102,4 +102,13 @@ extension SelectionView:UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let x = (collectionView.frame.width / CGFloat(tabArr.count)) * CGFloat(indexPath.row)
+        trackViewLeadingAnchor?.constant = x
+        
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
 }

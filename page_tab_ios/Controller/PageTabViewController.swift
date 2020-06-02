@@ -10,9 +10,10 @@ import UIKit
 
 class PageTabViewController: UIViewController {
 
-    let selectionView:SelectionView = {
+    lazy var selectionView:SelectionView = {
         let v = SelectionView()
         v.translatesAutoresizingMaskIntoConstraints = false
+        v.PageVC = self
         return v
     }()
     
@@ -53,6 +54,17 @@ class PageTabViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let i = Int(targetContentOffset.pointee.x / collectionView.frame.width)
+        let indexPath = IndexPath(item: i, section: 0)
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x / CGFloat(selectionView.tabArr.count)
+        selectionView.trackViewLeadingAnchor?.constant = x
     }
 
 }

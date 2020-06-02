@@ -11,6 +11,7 @@ import UIKit
 class SelectionView:UIView {
     
     var trackViewLeadingAnchor:NSLayoutConstraint?
+    var PageVC:PageTabViewController?
     
     let tabArr = ["Tab 1", "Tab 2"]
     

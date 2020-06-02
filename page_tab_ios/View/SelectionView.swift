@@ -13,6 +13,7 @@ class SelectionView:UIView {
     var trackViewLeadingAnchor:NSLayoutConstraint?
     var PageVC:PageTabViewController?
     
+//    let tabArr = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"]
     let tabArr = ["Tab 1", "Tab 2"]
     
     let seperatorView:UIView = {

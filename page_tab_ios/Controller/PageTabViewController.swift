@@ -77,12 +77,11 @@ class PageTabViewController: UIViewController {
 extension PageTabViewController:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return selectionView.tabArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabDetailContentCollectionViewCell", for: indexPath) as! TabDetailContentCollectionViewCell
-        cell.backgroundColor = indexPath.row % 2 == 0 ? .red : .white
         return cell
     }
     

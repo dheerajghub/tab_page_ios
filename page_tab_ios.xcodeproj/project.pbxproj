@@ -15,6 +15,7 @@
 		448301C324865A9F00219659 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C224865A9F00219659 /* SelectionView.swift */; };
 		448301C524865C2D00219659 /* SelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C424865C2D00219659 /* SelectionCollectionViewCell.swift */; };
 		448301C724867CAF00219659 /* TabDetailContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C624867CAF00219659 /* TabDetailContentCollectionViewCell.swift */; };
+		448301C92486846600219659 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448301C82486846600219659 /* DemoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		448301C224865A9F00219659 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		448301C424865C2D00219659 /* SelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		448301C624867CAF00219659 /* TabDetailContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		448301C82486846600219659 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				448301C224865A9F00219659 /* SelectionView.swift */,
 				448301C424865C2D00219659 /* SelectionCollectionViewCell.swift */,
 				448301C624867CAF00219659 /* TabDetailContentCollectionViewCell.swift */,
+				448301C82486846600219659 /* DemoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448301C92486846600219659 /* DemoCollectionViewCell.swift in Sources */,
 				448301C12486598A00219659 /* PageTabViewController.swift in Sources */,
 				448301AB248658E000219659 /* AppDelegate.swift in Sources */,
 				448301AD248658E000219659 /* SceneDelegate.swift in Sources */,

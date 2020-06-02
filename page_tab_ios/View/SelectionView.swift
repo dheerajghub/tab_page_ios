@@ -12,6 +12,8 @@ class SelectionView:UIView {
     
     var trackViewLeadingAnchor:NSLayoutConstraint?
     
+    let tabArr = ["Tab 1", "Tab 2"]
+    
     let seperatorView:UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +66,7 @@ class SelectionView:UIView {
         
         trackViewLeadingAnchor = trackView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
         trackViewLeadingAnchor?.isActive = true
-        trackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/2).isActive = true
+        trackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/CGFloat(tabArr.count)).isActive = true
         trackView.heightAnchor.constraint(equalToConstant: 0.7).isActive = true
         trackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
@@ -78,16 +80,18 @@ class SelectionView:UIView {
 extension SelectionView:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return tabArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectionCollectionViewCell", for: indexPath) as! SelectionCollectionViewCell
+        cell.tabLabel.text = tabArr[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width / 2, height: frame.height)
+        let estimatedW = (collectionView.frame.width / CGFloat(tabArr.count))
+        return CGSize(width:estimatedW, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

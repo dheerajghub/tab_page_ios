@@ -56,10 +56,15 @@ class PageTabViewController: UIViewController {
         ])
     }
     
+    func scrollToTabIndex(_ index: Int){
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let i = Int(targetContentOffset.pointee.x / collectionView.frame.width)
         let indexPath = IndexPath(item: i, section: 0)
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        selectionView.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -77,7 +82,7 @@ extension PageTabViewController:UICollectionViewDelegate, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabDetailContentCollectionViewCell", for: indexPath) as! TabDetailContentCollectionViewCell
-        cell.backgroundColor = indexPath.row % 2 == 0 ? .red : .blue
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .red : .white
         return cell
     }
     
